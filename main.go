@@ -116,6 +116,8 @@ func DeletePosts(client *Client, ids []int) error {
 		}
 
 		res.Body.Close()
+
+		time.Sleep(1 * time.Second)
 	}
 	return nil
 }

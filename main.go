@@ -63,7 +63,7 @@ type Client struct {
 func NewClient(apiUrl, token string) (*Client, error) {
 	client := &Client{
 		URL: apiUrl,
-		HTTPClient: &http.Client{},
+		HTTPClient: http.DefaultClient,
 		Token: token,
 	}
 	return client, nil
